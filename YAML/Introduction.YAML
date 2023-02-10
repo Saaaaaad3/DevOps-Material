@@ -1,0 +1,37 @@
+#This is a comment
+
+#Key value Pairs
+"Car" : "A vehicle with four wheels"
+18 : "Legal age"
+
+
+#List
+- Bugatti
+- Tesla
+- Honda
+- Toyota
+
+#With a key
+Fruits:
+ - Apple
+ - Mango
+ - Plum
+
+
+
+#Incorrect Syntax for List
+#Identation is very important, that is why this list is incorrect.
+- Bugatti
+ - Tesla
+- Honda
+- Toyota
+
+
+#Another Valid way to write Lists
+Fruits : [Mango, Apple, Plum]
+
+
+
+--- # (dash) used separate documents within a stream
+... # (Dots) Repesents the end of document
+

@@ -1,0 +1,60 @@
+#YAML automatically detects the data type but we can also 
+#Specify the type ourselves
+
+
+#Strings
+#Three Ways to represent String value
+Name : "Saad Mansuri"
+Age : Twenty Two
+Country : 'India'
+
+#Mutli-Line. All the sentence on a different line
+Intro : |
+This is an intro to YAML.
+A Data Format which is Similar to JSON and XML
+Used to transfer Data to multiple projects
+
+#Writing a Single Line on multiple lines
+SingleLineString: >
+All of this 
+Will be 
+on a single line.
+
+#Specifying the datatype
+
+ExplicitString : !!str "I am clearly a string!"
+
+########################
+
+#integer
+One : 1
+
+#Specifying the data type
+One : !!int 1
+negative : !!int -10
+exponentials : 3.03E45
+
+CommaNumbers : !!int +12_300 #12,300
+
+########################
+
+#float
+
+Profitpercent : !!float 200.34
+not A Number : .nan
+
+########################
+
+#null
+Missing Data : !!null Null # ~
+
+~ : Tilde also represents null
+
+########################
+
+#boolean
+
+FalseStates : !!bool false
+TrueState : !!bool true
+
+...

@@ -1,0 +1,107 @@
+#Sequences
+
+car : !!seq
+ - Colour
+ - Wheels
+ - Price
+ - Name
+
+
+#Sparse Sequence
+#Sequence with empty Keys are called Sparse Sequence
+Free Car: !!seq
+ - Colour
+ - Wheels
+ -
+ - Name
+
+########################
+
+#Nested Sequences
+-
+ - Cars
+ - Bikes
+ - Scooters
+ - Trucks
+-
+ - Keyboard
+ - Mouse
+ - Monitor
+ - CPU
+
+
+#Key Value pairs are called Maps
+!!map
+
+#Nested Maps
+Vehicle : Cars
+parts : 
+  Wheels : "Plain"
+  Colour : "Black"
+  Price : 100000
+  Owner : ~
+
+#Another way to Represent
+parts : {Wheels : "Plain",Colour : "Black",Price : 100000,Owner : ~}
+
+########################
+
+#Pairs
+#Can have duplicate values
+
+pair example: !!pairs
+ - Name : David
+ - Name : David
+ - Name : John
+
+#Another way to represent
+pair example: !!pairs [ Name : David, Name : David, Name : John]
+
+########################
+
+#Set
+# Cannot contain Duplicate values
+people : !!set
+ ? David 
+ ? Mary
+ ? John
+
+########################
+
+#Dictionary
+
+students : !!map
+ David:
+    Age : 25
+    Country : "China"
+    Course : "Computer Science"
+ Marry:
+    Age : 23
+    Country : "US"
+    Course : "Politics"
+
+
+#Anchors for Reusing properties
+Parts : &parts
+ Body: true
+ wheels : plain 
+
+Car :
+ Name : "Honda"
+ <<: *parts
+
+#Car is Same as 
+Car :
+ Name : "Honda"
+ Body: true
+ wheels : plain 
+
+
+#Some or All Properties can be overriden by explicitly mentioning new value for the key
+Car2 : 
+ Name : "Toyota"
+ <<: *parts
+ wheels : "Graphics"
+
+
+
