@@ -8,7 +8,7 @@ car : !!seq
 
 
 #Sparse Sequence
-#Sequence with empty Keys are called Sparse Sequence
+#Sequence with empty element(s) are called Sparse Sequence
 Free Car: !!seq
  - Colour
  - Wheels
